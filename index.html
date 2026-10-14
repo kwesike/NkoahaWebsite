@@ -14,16 +14,16 @@
   <!-- ═══ OPEN GRAPH (WhatsApp, LinkedIn, Facebook previews) ═══ -->
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://nkoaha.space/"/>
-  <meta property="og:title" content="NkoAha — E-Signatures & Document Management for Businesses"/>
-  <meta property="og:description" content="Send, sign, and manage your business documents online. Built for Businesses. No printing. No scanning. Legally binding."/>
+  <meta property="og:title" content="NkoAha — E-Signatures & Document Management for African Businesses"/>
+  <meta property="og:description" content="Send, sign, and manage your business documents online. Built for Nigerian and African SMEs. No printing. No scanning. Legally binding."/>
   <meta property="og:image" content="https://nkoaha.space/og-image.png"/>
   <meta property="og:locale" content="en_NG"/>
   <meta property="og:site_name" content="NkoAha"/>
 
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="NkoAha — E-Signatures for Businesses"/>
-  <meta name="twitter:description" content="Sign business documents online in minutes. Built for Businesses."/>
+  <meta name="twitter:title" content="NkoAha — E-Signatures for African Businesses"/>
+  <meta name="twitter:description" content="Sign business documents online in minutes. Built for Nigerian and African SMEs."/>
   <meta name="twitter:image" content="https://nkoaha.space/og-image.png"/>
 
   <!-- ═══ STRUCTURED DATA (JSON-LD) ═══ -->
@@ -34,7 +34,7 @@
     "name": "NkoAha",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "description": "Document management and e-signature platform for Businesses.",
+    "description": "Document management and e-signature platform for Nigerian and African SMEs.",
     "url": "https://nkoaha.space",
     "offers": {
       "@type": "Offer",
@@ -129,6 +129,9 @@
       color: var(--navy); letter-spacing: -.03em; flex-shrink: 0;
     }
     .nav-logo span { color: var(--purple); }
+    .brand-logo { height: 30px; width: auto; display: block; }
+    .footer-logo-chip { display: inline-block; background: #fff; padding: 8px 12px; border-radius: 10px; margin-bottom: 14px; }
+    .footer-logo-chip img { height: 28px; width: auto; display: block; }
     .nav-links {
       display: flex; align-items: center; gap: 32px;
     }
@@ -383,6 +386,7 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
       align-items: start;
     }
+    .pricing-grid.two { grid-template-columns: repeat(2, 1fr); max-width: 720px; margin: 0 auto 56px; }
     .plan-card {
       background: var(--white); border: 1px solid var(--border);
       border-radius: var(--r); padding: 36px; position: relative;
@@ -529,6 +533,7 @@
       .steps-grid::before { display: none; }
 
       .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-grid.two { grid-template-columns: 1fr; max-width: 420px; }
       .plan-card.popular { transform: none; }
 
       .contact-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -562,7 +567,7 @@
 <!-- ══ NAV ══ -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="NkoAha home">Nko<span>Aha</span></a>
+    <a href="/" class="nav-logo" aria-label="NkoAha home"><img class="brand-logo" src="https://qxppzivkykmglxjahpnk.supabase.co/storage/v1/object/public/assets/nkoaha-logo.png" alt="NkoAha"/></a>
     <ul class="nav-links" role="list">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How it works</a></li>
@@ -785,112 +790,93 @@
   <div class="container">
     <div class="section-header">
       <p class="section-eyebrow">Pricing</p>
-      <h2 class="section-title" id="pricing-heading">Pay for what you use.<br>Start for free.</h2>
-      <p class="section-sub">No setup fees. No hidden charges. Cancel anytime.</p>
+      <h2 class="section-title" id="pricing-heading">Simple pricing for<br>individuals and teams</h2>
+      <p class="section-sub">Start free, upgrade when you need more. All prices in Naira (₦). No hidden charges — cancel anytime.</p>
     </div>
-    <div class="pricing-grid">
-      <!-- Free -->
-      <div class="plan-card">
-        <div class="plan-name">Starter</div>
-        <div class="plan-price">Free <span>forever</span></div>
-        <p class="plan-desc">For individuals getting started with digital documents.</p>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            5 documents per month
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            E-signatures included
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            PDF & DOCX support
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Document annotations
-          </li>
-          <li class="plan-feature muted">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Team members
-          </li>
-          <li class="plan-feature muted">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Priority support
-          </li>
-        </ul>
-        <a href="https://app.nkoaha.space/signup" class="btn btn-ghost plan-btn">Get started free</a>
-      </div>
-      <!-- Pro — most popular -->
+
+    <!-- Individuals -->
+    <h3 style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);margin:0 0 18px;text-align:center">For individuals</h3>
+    <div class="pricing-grid two">
       <div class="plan-card popular">
         <div class="popular-badge">MOST POPULAR</div>
-        <div class="plan-name">Professional</div>
-        <div class="plan-price">₦9,900 <span>/month</span></div>
-        <p class="plan-desc">For growing businesses that handle documents regularly.</p>
+        <div class="plan-name">Monthly</div>
+        <div class="plan-price">₦18,000 <span>/month</span></div>
+        <p class="plan-desc">For individuals who sign and send documents regularly.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited documents
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            E-signatures & routing
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Up to 5 team members
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Comment & collaboration
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Priority email support
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Custom branding on docs
-          </li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>50 documents per month</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>E-signatures & routing</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>PDF, Word, Excel & PowerPoint</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Document annotations & tables</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>AI drafting with Uburu AI</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
         </ul>
-        <a href="https://app.nkoaha.space/signup?plan=pro" class="btn btn-primary plan-btn">Start 14-day free trial</a>
+        <a href="https://app.nkoaha.space/signup" class="btn btn-primary plan-btn">Get started</a>
       </div>
-      <!-- Business -->
       <div class="plan-card">
-        <div class="plan-name">Business</div>
-        <div class="plan-price">₦24,900 <span>/month</span></div>
-        <p class="plan-desc">For organisations managing high document volumes with multiple teams.</p>
+        <div class="plan-name">Yearly</div>
+        <div class="plan-price">₦195,000 <span>/year</span></div>
+        <p class="plan-desc">Best value — unlimited documents, billed once a year.</p>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited documents
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Unlimited team members
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Advanced routing & permissions
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            API access
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Dedicated support & onboarding
-          </li>
-          <li class="plan-feature">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            SLA guarantee
-          </li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited documents</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>E-signatures & routing</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>PDF, Word, Excel & PowerPoint</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Document annotations & tables</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>AI drafting with Uburu AI</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
         </ul>
-        <a href="#contact" class="btn btn-ghost plan-btn">Talk to us</a>
+        <a href="https://app.nkoaha.space/signup" class="btn btn-ghost plan-btn">Get started</a>
+      </div>
+    </div>
+
+    <!-- Organizations -->
+    <h3 style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--purple);margin:0 0 18px;text-align:center">For teams &amp; organisations</h3>
+    <div class="pricing-grid">
+      <div class="plan-card">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">₦195,000 <span>/month</span></div>
+        <p class="plan-desc">Up to 10 members. Or ₦1,638,000/year (save ~30%).</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 team members</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>100 documents/month</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full routing chains</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>1 partnership max</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Audit log</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
+        </ul>
+        <a href="https://app.nkoaha.space/signup" class="btn btn-ghost plan-btn">Get started</a>
+      </div>
+      <div class="plan-card popular">
+        <div class="popular-badge">MOST POPULAR</div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-price">₦395,000 <span>/month</span></div>
+        <p class="plan-desc">Up to 50 members. Or ₦3,318,000/year (save ~30%).</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 50 team members</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>500 documents/month</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Starter</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited partnerships</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority support + live chat</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Advanced audit logs</li>
+        </ul>
+        <a href="https://app.nkoaha.space/signup" class="btn btn-primary plan-btn">Get started</a>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price">₦595,000 <span>/month</span></div>
+        <p class="plan-desc">Unlimited everything. Or ₦4,950,000/year (save ~30%).</p>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited team members</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Unlimited documents/month</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Everything in Growth</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dedicated account manager</li>
+          <li class="plan-feature"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom onboarding</li>
+        </ul>
+        <a href="https://app.nkoaha.space/signup" class="btn btn-ghost plan-btn">Get started</a>
       </div>
     </div>
   </div>
@@ -986,7 +972,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="nav-logo">Nko<span>Aha</span></div>
+        <div class="footer-logo-chip"><img src="https://qxppzivkykmglxjahpnk.supabase.co/storage/v1/object/public/assets/nkoaha-logo.png" alt="NkoAha"/></div>
         <p>Document management and e-signatures built for Nigerian and African businesses. Secure, simple, and built to move your work forward.</p>
       </div>
       <div>
