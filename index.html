@@ -1352,9 +1352,12 @@
   function send(payload){
     payload.visitor_id=vid; payload.session_id=sid;
     payload.path=location.pathname+location.search; payload.referrer=document.referrer||"";
-    try{ var blob=new Blob([JSON.stringify(payload)],{type:"application/json"});
-      if(navigator.sendBeacon){ navigator.sendBeacon(EP,blob); return; } }catch(e){}
-    try{ fetch(EP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload),keepalive:true,mode:"no-cors"}); }catch(e){}
+    var body=JSON.stringify(payload);
+    // text/plain keeps it a CORS "simple" request (no preflight) for sendBeacon;
+    // the edge function JSON-parses the body regardless of content-type.
+    try{ var blob=new Blob([body],{type:"text/plain;charset=UTF-8"});
+      if(navigator.sendBeacon&&navigator.sendBeacon(EP,blob)){ return; } }catch(e){}
+    try{ fetch(EP,{method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:body,keepalive:true,mode:"no-cors"}); }catch(e){}
   }
   send({type:"pageview",utm_source:q.get("utm_source")||"",utm_medium:q.get("utm_medium")||"",utm_campaign:q.get("utm_campaign")||""});
   document.addEventListener("click",function(e){
