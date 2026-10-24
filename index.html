@@ -1085,7 +1085,7 @@
             </div>
             <div>
               <div class="channel-label">WhatsApp</div>
-              <div class="channel-value">+234 09076481659</div>
+              <div class="channel-value">+234 — (add your number)</div>
             </div>
           </div>
           <div class="channel">
@@ -1337,6 +1337,33 @@
     }
     setTimeout(function(){ cycle(); setInterval(cycle, 7200); }, 900);
   }
+})();
+</script>
+<!-- ══ ANALYTICS BEACON → track-visit edge function ══ -->
+<script>
+(function(){
+  var EP="https://qxppzivkykmglxjahpnk.supabase.co/functions/v1/track-visit";
+  function uid(){ try{ return (crypto.randomUUID&&crypto.randomUUID())||(Date.now().toString(36)+Math.random().toString(36).slice(2)); }catch(e){ return Date.now().toString(36)+Math.random().toString(36).slice(2); } }
+  function get(k,store){ try{ return store.getItem(k); }catch(e){ return null; } }
+  function set(k,v,store){ try{ store.setItem(k,v); }catch(e){} }
+  var vid=get("nk_vid",localStorage)||uid(); set("nk_vid",vid,localStorage);
+  var sid=get("nk_sid",sessionStorage)||uid(); set("nk_sid",sid,sessionStorage);
+  var q=new URLSearchParams(location.search);
+  function send(payload){
+    payload.visitor_id=vid; payload.session_id=sid;
+    payload.path=location.pathname+location.search; payload.referrer=document.referrer||"";
+    try{ var blob=new Blob([JSON.stringify(payload)],{type:"application/json"});
+      if(navigator.sendBeacon){ navigator.sendBeacon(EP,blob); return; } }catch(e){}
+    try{ fetch(EP,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload),keepalive:true,mode:"no-cors"}); }catch(e){}
+  }
+  send({type:"pageview",utm_source:q.get("utm_source")||"",utm_medium:q.get("utm_medium")||"",utm_campaign:q.get("utm_campaign")||""});
+  document.addEventListener("click",function(e){
+    var el=e.target&&e.target.closest?e.target.closest("a,button"):null; if(!el) return;
+    var label=(el.getAttribute("aria-label")||el.textContent||"").trim().replace(/\s+/g," ").slice(0,120);
+    var href=el.getAttribute("href")||"";
+    if(!label&&!href) return;
+    send({type:"click",label:label,href:href});
+  },{capture:true});
 })();
 </script>
 </body>
